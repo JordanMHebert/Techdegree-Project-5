@@ -1,0 +1,24 @@
+/* ============================================= */
+/*              Forms                            */
+/* ============================================= */
+.form {
+  @include basis;
+}
+
+.input {
+  @include border;
+  @include block;
+  @include pad;
+  width: 94%;
+  margin: 10px auto 0;
+  border-bottom: 5px solid $color-primary;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

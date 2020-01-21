@@ -1,0 +1,58 @@
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
+@media (min-width: $breakpoints) {
+  .container {
+    @include center;
+    max-width: 1400px;
+  }
+
+  .centered {
+    @include center;
+  }
+
+  .row {
+    @include row;
+  }
+
+  [class^=col] {
+    @include align;
+    @include display;
+    justify-content: center;
+    margin-top: 0;
+}
+
+  [class^=col] + [class^=col] {
+    @include left;
+}
+
+
+  @each $flex, $box in $flex {
+    .col-#{$flex} {
+      flex-basis: $box;
+    }
+  }
+
+  .nav {
+    @include row;
+    @include align;
+    justify-content: flex-end;
+}
+
+  .nav-link {
+    flex-basis: 100px;
+  }
+
+  .btn {
+    padding: 10px 30px;
+  }
+
+  .btn + .btn {
+    @include left;
+}
+
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
+}

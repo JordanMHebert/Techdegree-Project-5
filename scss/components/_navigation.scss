@@ -1,0 +1,26 @@
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+
+.nav {
+  @include column;
+  @include display;
+  @include basis;
+  padding-left: 0;
+}
+
+.nav-link {
+  @include block;
+  @include radius;
+  @include width;
+  @include padding;
+  text-align: center;
+  transition:
+    background-color .2s ease-in-out,
+    color .2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: $color-white;
+  background-color: $color-primary;
+}

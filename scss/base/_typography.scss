@@ -1,0 +1,45 @@
+/* ============================================= */
+/*              Base styles                      */
+/* ============================================= */
+
+* {
+  @include box;
+  font-family: 'Lato', sans-serif;
+  color: $color-text;
+}
+
+p {
+  line-height: 1.45em;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+.headline-primary {
+  @include left;
+  color: $color-primary;
+}
+
+.headline-secondary {
+  @include weight;
+  color: $color-secondary;
+}
+
+.link {
+  color: $color-link;
+  font-weight: 700;
+}
+
+.blockquote {
+  @include weight;
+  @include radius;
+  font-size: 1.5em;
+  font-style: italic;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 8px solid $color-primary;
+}
