@@ -21,12 +21,16 @@ $font-stack-secondary: 'Bree Serif', serif;
 
 
 // Layout
-$max-width: 1000px;
 $gutter: 10px;
+$max-width:1000px;
 
 
 //breakpoints
-$breakpoints: 768px;
+$break-points-xs: 500px;
+$break-points-sm: 600px;
+$break-points-med: 768px;
+$break-points-lg: 992px;
+
 
 
   /* ============================================= */

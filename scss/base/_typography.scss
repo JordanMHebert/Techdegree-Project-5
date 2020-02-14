@@ -1,7 +1,6 @@
 /* ============================================= */
 /*              Base styles                      */
 /* ============================================= */
-
 * {
   @include box;
   font-family: 'Lato', sans-serif;
@@ -16,30 +15,52 @@ a {
   text-decoration: none;
 }
 
+.container {
+  display: flex;
+}
+
+.inner-wrapper {
+  flex: 1;
+  margin: 5px;
+}
+
+img {
+  width: 24.7%;
+}
+
+img {
+  padding-left: 62px;
+  padding-bottom: 62px;
+}
 /* ============================================= */
-/*              Typography                       */
+/*              Search Bar                   */
 /* ============================================= */
-.headline-primary {
-  @include left;
-  color: $color-primary;
+#searchbar {
+  margin-left: 29.3%;
+  padding: 1.5%;
+  border-radius: 3.2%;
 }
 
-.headline-secondary {
-  @include weight;
-  color: $color-secondary;
+input[type=text] {
+  width: 45%;
+  -webkit-transition: width 0.15s ease-in-out;
+  transition: width 0.15s ease-in-out;
+}
+/* When the input field gets focus,
+        change its width to 100% */
+input[type=text]:focus {
+  width: 80%;
 }
 
-.link {
-  color: $color-link;
-  font-weight: 700;
-}
-
-.blockquote {
-  @include weight;
-  @include radius;
+#list {
   font-size: 1.5em;
-  font-style: italic;
-  margin-left: 20px;
-  padding-left: 20px;
-  border-left: 8px solid $color-primary;
+  margin-left: 90px;
+}
+
+.search {
+  display: list-item;
+}
+
+.inner-wrapper {
+  margin-top: 2.5%;
 }

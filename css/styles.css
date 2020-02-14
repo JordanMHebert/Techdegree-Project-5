@@ -10,6 +10,36 @@
 /* ============================================= */
 /*              flex-basis                       */
 /* ============================================= */
+.percentage-to-use {
+  width: 4%;
+}
+
+.em-font {
+  font-size: 1.25em;
+}
+
+.rem-font {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .two-items-per-line {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    flex: 1 17%;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  .three-items-per-line {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    flex-basis: 17%;
+  }
+}
 /* ============================================= */
 /* Base Imports */
 /* ============================================= */
@@ -370,32 +400,55 @@ a {
   text-decoration: none;
 }
 
+.container {
+  display: flex;
+}
+
+.inner-wrapper {
+  flex: 1;
+  margin: 5px;
+}
+
+img {
+  width: 24.7%;
+}
+
+img {
+  padding-left: 62px;
+  padding-bottom: 62px;
+}
+
 /* ============================================= */
-/*              Typography                       */
+/*              Search Bar                   */
 /* ============================================= */
-.headline-primary {
-  margin-left: 10px;
-  color: #58e1c1;
+#searchbar {
+  margin-left: 29.3%;
+  padding: 1.5%;
+  border-radius: 3.2%;
 }
 
-.headline-secondary {
-  font-weight: 300;
-  color: #777;
+input[type=text] {
+  width: 45%;
+  transition: width 0.15s ease-in-out;
 }
 
-.link {
-  color: #51ddfc;
-  font-weight: 700;
+/* When the input field gets focus,
+        change its width to 100% */
+input[type=text]:focus {
+  width: 80%;
 }
 
-.blockquote {
-  font-weight: 300;
-  border-radius: 5px;
+#list {
   font-size: 1.5em;
-  font-style: italic;
-  margin-left: 20px;
-  padding-left: 20px;
-  border-left: 8px solid #58e1c1;
+  margin-left: 90px;
+}
+
+.search {
+  display: list-item;
+}
+
+.inner-wrapper {
+  margin-top: 2.5%;
 }
 
 /* ============================================= */
@@ -689,4 +742,3 @@ a {
     margin-right: initial;
   }
 }
-/*# sourceMappingURL=styles.css.map */
