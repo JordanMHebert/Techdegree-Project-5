@@ -389,7 +389,6 @@ template {
 * {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
-  color: #2f4f4f;
 }
 
 p {
@@ -413,7 +412,7 @@ img {
   width: 24.7%;
 }
 
-img {
+.thumbnails {
   padding-left: 62px;
   padding-bottom: 62px;
 }

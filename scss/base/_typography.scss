@@ -4,7 +4,6 @@
 * {
   @include box;
   font-family: 'Lato', sans-serif;
-  color: $color-text;
 }
 
 p {
@@ -28,7 +27,7 @@ img {
   width: 24.7%;
 }
 
-img {
+.thumbnails{
   padding-left: 62px;
   padding-bottom: 62px;
 }
