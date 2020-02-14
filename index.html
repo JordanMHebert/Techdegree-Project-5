@@ -111,9 +111,12 @@ I walked through this meadow of bluebells and got a good view of the snow on the
 				imgArray[0].src = 'photos/thumbnails/01.jpg';
 				searchfor=searchfor.toLowerCase();
 				let x = document.getElementsByClassName('picture');
+
 				for (i = 0; i < x.length; i++) {
-							if (x[i].attr('data-title').toLowerCase().includes(searchfor)) {
-								$(imgArray[i]).show(); } }
+							console.log(x[i]);
+							// if (x[i].attr('data-title').toLowerCase().includes(searchfor)) {
+								// $(imgArray[i]).show(); }
+							}
 		 }
 		});
 		</script>
