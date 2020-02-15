@@ -2,6 +2,7 @@
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: $break-points-med) {
+
   .container {
     @include center;
     max-width: 1400px;
