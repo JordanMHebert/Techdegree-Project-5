@@ -47,9 +47,9 @@ input[type=text] {
 }
 /* When the input field gets focus,
         change its width to 100% */
-input[type=text]:focus {
-  width: 80%;
-}
+// input[type=text]:focus {
+//   width: 80%;
+// }
 
 #list {
   font-size: 1.5em;
