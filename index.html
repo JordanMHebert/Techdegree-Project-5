@@ -1,141 +1,216 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- html -->
 <html lang="en">
 
-<!-- head of the page -->
-
+<!-- head -->
 <head>
+
+	<!-- title of page -->
+	<title>Jordan's Interactive Photo Gallery</title>
+	<!-- /title of page -->
+
+	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Interactive Photo Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!-- /Required meta tags -->
 
-	<!--CSS-->
-	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css' />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel='stylesheet' href="js/Lightbx/lightbox.css" />
-	<link rel='stylesheet' href="css/styles.css" />
+	<link rel="stylesheet" href="css/styles.css" />
+	<!-- /Bootstrap CSS -->
+
 </head>
+<!-- /head -->
 
-<!-- Body of Page -->
+<!-- body tag -->
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="200">
 
-<body>
-	<div class="container">
-
-		<!-- Search Box -->
-				<input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Search">
-
-
-		<!-- Adding Picture -->
-		<div class="inner-wrapper">
-
-			<a href="photos/01.jpg" class="picture" data-lightbox="image-1" data-title="Hay Bales
-I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
-				<img class=thumbnails src="photos/thumbnails/01.jpg" alt="Hay" />
-			</a>
-
-			<a href="photos/02.jpg" class="picture" data-lightbox="image-1" data-title="Lake
-The lake was so calm today. We had a great view of the snow on the mountains from here.">
-				<img class=thumbnails src=photos/thumbnails/02.jpg alt="Lake" />
-			</a>
-
-			<a href="photos/03.jpg" class="picture" data-lightbox="image-1" data-title="Canyon
-I hiked to the top of the mountain and got this picture of the canyon and trees below.">
-				<img class=thumbnails src=photos/thumbnails/03.jpg alt="Canyon" />
-			</a>
-
-			<a href="photos/04.jpg" class="picture" data-lightbox="image-1" data-title="Iceberg
-It was amazing to see an iceberg up close, it was so cold but didn’t snow today.">
-				<img class=thumbnails src=photos/thumbnails/04.jpg alt="Iceberg" />
-			</a>
-
-			<a href="photos/05.jpg" class="picture" data-lightbox="image-1" data-title="Desert
-The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
-				<img class=thumbnails src=photos/thumbnails/05.jpg alt="Desert" />
-			</a>
-
-			<a href="photos/06.jpg" class="picture" data-lightbox="image-1" data-title="Fall
-Fall is coming, I love when the leaves on the trees start to change color.">
-				<img class=thumbnails src=photos/thumbnails/06.jpg alt="Fall" />
-			</a>
-
-			<a href="photos/07.jpg" class="picture" data-lightbox="image-1" data-title="Plantation
-I drove past this plantation yesterday, everything is so green!">
-				<img class=thumbnails src=photos/thumbnails/07.jpg alt="Plantation" />
-			</a>
-
-			<a href="photos/08.jpg" class="picture" data-lightbox="image-1" data-title="Dunes
-My summer vacation to the Oregon Coast. I love the sandy dunes!">
-				<img class=thumbnails src=photos/thumbnails/08.jpg alt="Dunes" />
-			</a>
-
-			<a href="photos/09.jpg" class="picture" data-lightbox="image-1" data-title="Countryside Lane
-We enjoyed a quiet stroll down this countryside lane.">
-				<img class=thumbnails src=photos/thumbnails/09.jpg alt="Countryside" />
-			</a>
-
-			<a href="photos/10.jpg" class="picture" data-lightbox="image-1" data-title="Sunset
-Sunset at the coast! The sky turned a lovely shade of orange.">
-				<img class=thumbnails src=photos/thumbnails/10.jpg alt="Sunset" />
-			</a>
-
-			<a href="photos/11.jpg" class="picture" data-lightbox="image-1" data-title="Cave
-I did a tour of a cave today and the view of the landscape below was breathtaking.">
-				<img class=thumbnails src=photos/thumbnails/11.jpg alt="Cave" />
-			</a>
-
-			<a href="photos/12.jpg" class="picture" data-lightbox="image-1" data-title="Bluebells
-I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
-				<img class=thumbnails src=photos/thumbnails/12.jpg alt="Bluebells" />
-			</a>
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<a class="navbar-brand order-1 text-white" id="name">Jordan's Interactive Photo Gallery</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			</div>
 		</div>
+	</nav>
+	<!-- /nav -->
 
-		<!-- Javascript -->
-		<script src="js/jquery-3.4.1.min.js"></script>
-		<script src="js/lightbox.js"></script>
-		<script src="js/scripts.js"></script>
-		<script>
-			var imgTitles = [];
-			$(document).ready(GetTitles);
+	<!-- Body of Page -->
+		<div class="container my-5">
 
-			function GetTitles() {
-				let x = document.getElementsByClassName('thumbnails');
-				for (i = 0; i < x.length; i++) {
-					imgTitles[i] = x[i].alt;
-				}
-			}
-			$("#searchbar").keyup(function() {
-				var searchfor = $.trim(this.value);
-				if (searchfor === "")
-					$("img").show();
-				else {
-					$("img").hide();
-					try {
-						$("img[alt*=" + searchfor + " i]").show();
-					} catch (e) {}
-					searchfor = searchfor.toLowerCase();
-					let y = document.getElementsByClassName('picture');
-					for (i = 0; i < y.length; i++) {
-						if ($(y[i]).data("title").toLowerCase().includes(String(searchfor))) {
-							$("img[alt*=" + imgTitles[i] + "]").show();
-						}
+			<!-- Search Box -->
+			<input id="searchbar" onkeyup="search()" type="text" name="search" placeholder="Search">
+			<!-- /search box  -->
+
+			<!-- Adding Pictures -->
+			<div class="inner-wrapper">
+
+				<a href="photos/01.jpg" class="picture" data-lightbox="image-1" data-title="Hay Bales
+I love hay bales. Took this snap on a drive through the countryside past some straw fields.">
+					<img class=thumbnails src="photos/thumbnails/01.jpg" alt="Hay" />
+				</a>
+
+				<a href="photos/02.jpg" class="picture" data-lightbox="image-1" data-title="Lake
+The lake was so calm today. We had a great view of the snow on the mountains from here.">
+					<img class=thumbnails src=photos/thumbnails/02.jpg alt="Lake" />
+				</a>
+
+				<a href="photos/03.jpg" class="picture" data-lightbox="image-1" data-title="Canyon
+I hiked to the top of the mountain and got this picture of the canyon and trees below.">
+					<img class=thumbnails src=photos/thumbnails/03.jpg alt="Canyon" />
+				</a>
+
+				<a href="photos/04.jpg" class="picture" data-lightbox="image-1" data-title="Iceberg
+It was amazing to see an iceberg up close, it was so cold but didn’t snow today.">
+					<img class=thumbnails src=photos/thumbnails/04.jpg alt="Iceberg" />
+				</a>
+
+				<a href="photos/05.jpg" class="picture" data-lightbox="image-1" data-title="Desert
+The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons.">
+					<img class=thumbnails src=photos/thumbnails/05.jpg alt="Desert" />
+				</a>
+
+				<a href="photos/06.jpg" class="picture" data-lightbox="image-1" data-title="Fall
+Fall is coming, I love when the leaves on the trees start to change color.">
+					<img class=thumbnails src=photos/thumbnails/06.jpg alt="Fall" />
+				</a>
+
+				<a href="photos/07.jpg" class="picture" data-lightbox="image-1" data-title="Plantation
+I drove past this plantation yesterday, everything is so green!">
+					<img class=thumbnails src=photos/thumbnails/07.jpg alt="Plantation" />
+				</a>
+
+				<a href="photos/08.jpg" class="picture" data-lightbox="image-1" data-title="Dunes
+My summer vacation to the Oregon Coast. I love the sandy dunes!">
+					<img class=thumbnails src=photos/thumbnails/08.jpg alt="Dunes" />
+				</a>
+
+				<a href="photos/09.jpg" class="picture" data-lightbox="image-1" data-title="Countryside Lane
+We enjoyed a quiet stroll down this countryside lane.">
+					<img class=thumbnails src=photos/thumbnails/09.jpg alt="Countryside" />
+				</a>
+
+				<a href="photos/10.jpg" class="picture" data-lightbox="image-1" data-title="Sunset
+Sunset at the coast! The sky turned a lovely shade of orange.">
+					<img class=thumbnails src=photos/thumbnails/10.jpg alt="Sunset" />
+				</a>
+
+				<a href="photos/11.jpg" class="picture" data-lightbox="image-1" data-title="Cave
+I did a tour of a cave today and the view of the landscape below was breathtaking.">
+					<img class=thumbnails src=photos/thumbnails/11.jpg alt="Cave" />
+				</a>
+
+				<a href="photos/12.jpg" class="picture" data-lightbox="image-1" data-title="Bluebells
+I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in.">
+					<img class=thumbnails src=photos/thumbnails/12.jpg alt="Bluebells" />
+				</a>
+			</div>
+			<!-- /adding pictures -->
+
+			<!-- contact Info -->
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<h2 class="text-center" id="Contact">Contact</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<p class="text-center interested"> If interested in my work as a Front End Web Developer and want to discuss the possibility of employment or contract work. Please reach out via email to jmhebert@liberty.edu or click the link below.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="col">
+							<p class="text-center"><strong>Email:</strong>
+								<a href="mailto:jmhebert@liberty.edu?subject=Potential%20Work%20as%20a%20Front%20End%20Developer">jmhebert@liberty.edu</a></p>
+						</div>
+					</div>
+				</div>
+				<!-- /contact Info -->
+
+			<br class="my-5" />
+
+
+
+			<!-- Javascript -->
+			<script src="js/jquery-3.4.1.min.js"></script>
+			<script src="js/lightbox.js"></script>
+			<script src="js/scripts.js"></script>
+			<script>
+				var imgTitles = [];
+				$(document).ready(GetTitles);
+
+				function GetTitles() {
+					let x = document.getElementsByClassName('thumbnails');
+					for (i = 0; i < x.length; i++) {
+						imgTitles[i] = x[i].alt;
 					}
 				}
-			});
-		</script>
+				$("#searchbar").keyup(function() {
+					var searchfor = $.trim(this.value);
+					if (searchfor === "")
+						$("img").show();
+					else {
+						$("img").hide();
+						try {
+							$("img[alt*=" + searchfor + " i]").show();
+						} catch (e) {}
+						searchfor = searchfor.toLowerCase();
+						let y = document.getElementsByClassName('picture');
+						for (i = 0; i < y.length; i++) {
+							if ($(y[i]).data("title").toLowerCase().includes(String(searchfor))) {
+								$("img[alt*=" + imgTitles[i] + "]").show();
+							}
+						}
+					}
+				});
+			</script>
+			<!-- /JavaScript -->
+		</div>
 
-	</div>
-	<!-- the footer section of the page -->
-<footer>
-	<ul>
-		<a href="https://twitter.com/JordanH62852157" target="_blank" class="twitter"><img src="photos/twitter.png" alt="Twitter logo" class="twitter"/></a>
-		<a href="https://www.linkedin.com/in/jordan-hebert-8a7981193/" target="_blank" class="linkedin"><img src="photos/LinkedIn.png" alt="LinkedIn logo" class="linkedin"/></a>
-		<a href="https://github.com/JordanMHebert" target="_blank" class="github"><img src="photos/github.png" alt="Github logo" class="github"/></a>
-		<a href="https://www.facebook.com/jordan.hebert.5245/" target="_blank" class="facebook"><img src="photos/Facebook.png" alt="Facebook logo" class="facebook"/></a>
-	</ul>
-	<p class="copyright">Website created by: Jordan Hebert</p>
-	<p class="copyright">All Rights reserved &copy; 2020</p>
-</footer>
-</body>
+
+		<!-- footer of page -->
+		<footer class="bg-dark">
+			<ul class="nav justify-content-center">
+				<li class="nav-item">
+					<a href="https://twitter.com/JordanH62852157" target="_blank" class="twitter">
+						<img src="photos/twitter.png" alt="Twitter logo" class="twitter" /></a>
+				</li>
+				<li class="nav-item">
+					<a href="https://www.linkedin.com/in/jordan-hebert-8a7981193/" target="_blank" class="linkedin">
+						<img src="photos/LinkedIn.png" alt="LinkedIn logo" class="linkedin" /></a>
+				</li>
+				<li class="nav-item">
+					<a href="https://github.com/JordanMHebert" target="_blank" class="github ">
+						<img src="photos/github.png" alt="Github logo" class="github" /></a>
+				</li>
+			</ul>
+			<p class="copyright">Website created by: Jordan Hebert</p>
+			<p class="copyright2">All Rights reserved &copy; 2020</p>
+		</footer>
+		<!-- /footer of page -->
+
+		<!-- JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+		<!-- /JavaScript -->
+
+	</body>
+	<!-- /body -->
+
+</html>
+<!-- /html -->
 
 </html>
